@@ -1,16 +1,17 @@
 <template>
   <NavBar />
-  <Slider />
+  <Carousel />
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-import Slider from './components/SliderOne.vue'
+import Carousel from './components/CarouselOne.vue'
 
 export default {
-components:{
+  name: 'app',
+  components: {
     NavBar,
-    Slider
+    Carousel
 } 
 }
 </script>
