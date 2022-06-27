@@ -1,18 +1,18 @@
 <template>
   <NavBar />
-  <Header />
+  <Slider />
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-import Header from './components/HeaderOne.vue'
+import Slider from './components/SliderOne.vue'
+
 export default {
-
+components:{
     NavBar,
-    Header
+    Slider
 } 
-
-
+}
 </script>
 
 
