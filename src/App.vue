@@ -1,19 +1,25 @@
 <template>
   <NavBar />
-  <Carousel />
+  <Header />
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-import Carousel from './components/CarouselOne.vue'
+import Header from './components/HeaderOne.vue'
 
 export default {
-  name: 'app',
+  name: 'NavBar',
   components: {
-    NavBar,
-    Carousel
+    NavBar
+},
+  header: 'Header',
+  component: {
+    Header
 } 
+ 
 }
+
+
 </script>
 
 
