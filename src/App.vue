@@ -5,7 +5,7 @@
       <!-- if the route is this one  / -->
 
       <h1 class="pt-5 font-weight-light">
-        Vos films préférés sont sur Happy Movies!
+      Watch Movies With B-movies
       </h1>
 
       <MovieList :movies="movies" :loading="loading" :errored="errored" />
