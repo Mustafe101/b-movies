@@ -12,12 +12,6 @@ export default {
 
 
 <style>
-.try{
-    display: flex;
-    width: 50vw;
-    height: 50vh;
-    background-color: blue;
 
-}
 
 </style>
