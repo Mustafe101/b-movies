@@ -1,10 +1,54 @@
 <template>
-    <div class="card" style="width: 18rem;">
-  <img src="" class="card-img-top" alt="...">
+<div class="cards">
+  
+    <div class="card" style="width: 25rem;">
+      <h5 class="card-title">{{title}}</h5>
+  <img v-bind:src="preUrl + poster_path" alt="moviePoster" />
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p>{{release_date}}</p>
+    <p class="card-text">{{overview}}</p>
+    <a href="#" class="btn btn-primary">watch</a>
   </div>
 </div>
+
+</div>
 </template>
+
+<script>
+  export default {
+    name: "MoviesCard",
+    props:["id", "title", "poster_path", "release_date", "vote_average", "overview"],
+
+  data() {
+      return {
+        preUrl: "https://image.tmdb.org/t/p/original/",
+      };
+    },
+  }
+
+</script>
+
+<style>
+body{
+  background-color: rgb(255, 149, 20);
+  margin: 0%;
+  padding: 0%;
+}
+.card{
+  display: flex;
+  background-color: rgb(56, 218, 218);
+  width: 100vw;
+  padding: 5px;
+  margin: 10px;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+h5{
+  color: red;
+  font-family: 'Titan One', cursive;
+}
+
+
+</style>

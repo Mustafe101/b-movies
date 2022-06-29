@@ -1,37 +1,38 @@
 
 <template>
-    <h1>Movie List</h1>
-    <div >
+  <h1>Movie <span> List</span></h1>
 
+  <div>
     <ul>
-
-    <li class=" list_movies" v-for="movie in movies" v-bind:key="movie.id">
-
+      <li class="list_movies" v-for="movie in movies" v-bind:key="movie.id">
         <MovieCard
-        :id="movie.id"
-        :title="movie.title"
-        :poster_path="movie.poster_path"
-        :release_date = "movie.release_date"
-        :vote_average = "movie.vote_average"
-        :overview = "movie.overview"
+          :id="movie.id"
+          :title="movie.title"
+          :poster_path="movie.poster_path"
+          :release_date="movie.release_date"
+          :vote_average="movie.vote_average"
+          :overview="movie.overview"
         />
-        </li>
+      </li>
     </ul>
-
-    </div>
+  </div>
 </template>
 
 
 
 <script>
-import MovieCard from './MoviesCard.vue'
+import MovieCard from "./MoviesCard.vue";
 
-    export default {
-        name: "MovieList",
-        components: {
-            MovieCard
-        },
+export default {
+  name: "MovieList",
+  components: {
+    MovieCard,
+  },
 
-        props:["movies"]
-    }
+  props: ["movies"],
+};
 </script>
+
+
+<style>
+</style>

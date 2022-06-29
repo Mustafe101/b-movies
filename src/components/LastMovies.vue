@@ -1,5 +1,5 @@
 <template>
-<h1>Last Movies</h1>
+<h1>Last <span> Movies</span></h1>
 </template>
 
 <script>

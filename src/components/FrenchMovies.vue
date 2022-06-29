@@ -1,5 +1,5 @@
 <template>
-<h1>French Movies</h1>
+<h1>French <span> Movies</span></h1>
 
 </template>
 

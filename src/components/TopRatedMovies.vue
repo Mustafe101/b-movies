@@ -1,6 +1,6 @@
 <template>
  
-<h1>Top Rated Movies</h1>
+<h1>Top Rated <span> Movies</span></h1>
 
 </template>
 

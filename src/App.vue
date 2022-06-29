@@ -1,17 +1,14 @@
 <template>
   <div id="app">
+     
     <HeaderOne />
-      <h1 class="pt-5 font-weight-light">
-        Vos films préférés sont sur Happy Movies!
-      </h1>
-    
 
-
+     
     <div v-if="$route.path == '/'">
       <!-- if the route is this one  / -->
 
-
       <MovieList :movies="movies" :loading="loading" :errored="errored" />
+      <SortButtoms :movies="movies" @sort-movies="sortMovies" />
     </div>
 
     <div v-else>
@@ -23,9 +20,6 @@
   </div>
   <div v-bind:class="{ responseOne }"></div>
 </template>
-
-
-
 
 
 <script>
@@ -61,7 +55,6 @@ export default {
       .then((responseOne) => {
         this.movies = responseOne.data.results;
         console.log(this.movies);
-
       });
   },
 }
@@ -74,11 +67,25 @@ export default {
 
 <style>
 #app {
+  display: flex;
+  flex-direction: column;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+h1{
+  font-family: 'Titan One', cursive;
+
+}
+span{
+  color: red;
+}
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 </style>
