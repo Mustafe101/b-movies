@@ -59,7 +59,7 @@ export default {
     MovieList
   },
   
-
+//put v-for with v bind to display theapi content
 
   data() {
     return { movies: null };
@@ -78,10 +78,7 @@ export default {
 };
 
 
-
 </script>
-
-
 
 
 <style>
