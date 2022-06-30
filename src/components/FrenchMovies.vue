@@ -9,3 +9,9 @@ export default {
     name: "FrenchMovies",
 }
 </script>
+
+
+<style>
+
+
+</style>

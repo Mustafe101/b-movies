@@ -15,6 +15,7 @@
       <!-- if the route is not this one  / -->
       <router-view v-bind:key="$route.fullPath"></router-view>
     </div>
+
     <FooterOne />
 
   </div>
