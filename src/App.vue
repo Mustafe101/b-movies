@@ -6,7 +6,6 @@
      
     <div v-if="$route.path == '/'">
       <!-- if the route is this one  / -->
-
       <MovieList :movies="movies" :loading="loading" :errored="errored" />
       <SortButtoms :movies="movies" @sort-movies="sortMovies" />
     </div>
@@ -29,13 +28,14 @@ import HeaderOne from "./components/HeaderOne.vue";
 import FooterOne from "./components/FooterOne.vue";
 import MovieList from "./components/utils/MoviesList.vue";
 
+
 export default {
   name: "App",
   
   components: {
     FooterOne,
     HeaderOne,
-    MovieList
+    MovieList,
   },
   
 

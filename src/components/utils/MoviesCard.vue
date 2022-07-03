@@ -1,7 +1,7 @@
 <template>
 <div class="cards">
   
-    <div class="card" style="width: 25rem;">
+    <div class="card" style="width: 20rem;">
       <h5 class="card-title">{{title}}</h5>
   <img v-bind:src="preUrl + poster_path" alt="moviePoster" />
   <div class="card-body">
@@ -36,18 +36,20 @@ body{
 }
 .card{
   display: flex;
-  background-color: rgb(56, 218, 218);
+  background-color: #2c3e50;
   width: 100vw;
   padding: 5px;
   margin: 10px;
+  color: white;
 }
 li{
     text-decoration: none;
     list-style: none;
 }
 h5{
-  color: red;
+  color: white;
   font-family: 'Titan One', cursive;
+  height: 10vh;
 }
 
 
