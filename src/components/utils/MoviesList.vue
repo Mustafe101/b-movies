@@ -1,7 +1,5 @@
 
 <template>
-  <h1>Movie <span> List</span></h1>
-
   <div>
     <ul>
       <li class="list_movies" v-for="movie in movies" v-bind:key="movie.id">
@@ -21,7 +19,7 @@
 
 
 <script>
-import MovieCard from "./MoviesCard.vue";
+import MovieCard from "./MovieCard.vue";
 
 export default {
   name: "MovieList",

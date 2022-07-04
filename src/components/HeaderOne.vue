@@ -44,6 +44,9 @@ export default {
 
 
 <style>
+nav{
+  position: fixed;
+}
 li{
   padding: 20px;
   }
@@ -79,3 +82,4 @@ a:hover{
 }
 
 </style>
+

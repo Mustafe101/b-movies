@@ -1,45 +1,55 @@
-<template>    
-   <H1>Last <span> Movies</span></h1>
- 
-    <div class="American_movies" v-for="movie in movies" v-bind:key="movie.id">
+<template>
+  <h1>American <span> Movies</span></h1>
 
-    <div class="card" style="width: 20rem;">
-      <h5 class="card-title">{{title}}</h5>
-       <img v-bind:src="preUrl + poster_path" alt="moviePoster" />
-  <div class="card-body">
-    <p>{{release_date}}</p>
-    <p class="card-text">{{overview}}</p>
-    <a href="#" class="btn btn-primary">watch</a>
+  <div>
+    <ul>
+      <li class="american_movies" v-for="movie in movies" v-bind:key="movie.id">
+        <MovieCard
+          :id="movie.id"
+          :title="movie.title"
+          :poster_path="movie.poster_path"
+          :release_date="movie.release_date"
+          :vote_average="movie.vote_average"
+          :overview="movie.overview"
+        />
+      </li>
+    </ul>
   </div>
-</div>
-</div>
 </template>
 
+
 <script>
-import axios from 'axios'
+import MovieCard from "./utils/MovieCard.vue";
+import axios from "axios";
 
 export default {
   name: "AmericanMovies",
-  props:["id", "title", "poster_path", "release_date", "vote_average", "overview"],
-  data(){
-    return{
-    movies: null,
-    preUrl: "https://image.tmdb.org/t/p/original/",
-  }
-},
+  components: {
+    MovieCard
+  },
 
-mounted () {
+  data() {
+    return {
+      movies: null,
+      preUrl: "https://image.tmdb.org/t/p/original/",
+    };
+  },
+
+  mounted() {
     axios
-    .get('https://api.themoviedb.org/3/movie/top_rated?api_key=79171e57a92274a59243874f8c89c98e&language=en-US&page=1')
-    .then((reponseTwo) => {
-    this.movies = reponseTwo;
-    console.log(this.movies)
-})
-}
+      .get(
+        "https://api.themoviedb.org/3/discover/movie?api_key=79171e57a92274a59243874f8c89c98e&language=en-US&certification_country=us&include_adult=false&include_video=false&page=2&with_watch_monetization_types=flatrate"
+      )
+      .then((reponseOne) => {
+        this.movies = reponseOne.data.results;
+        console.log(this.movies);
+      });
+  },
 };
 </script>
 
+
+
+
 <style>
-
-
 </style>

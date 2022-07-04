@@ -3,7 +3,6 @@
      
     <HeaderOne />
 
-     
     <div v-if="$route.path == '/'">
       <!-- if the route is this one  / -->
       <MovieList :movies="movies" :loading="loading" :errored="errored" />
@@ -18,7 +17,8 @@
     <FooterOne />
 
   </div>
-  <div v-bind:class="{ responseOne }"></div>
+  <div v-bind:class="{ responseOne }">
+  </div>
 </template>
 
 
@@ -31,7 +31,7 @@ import MovieList from "./components/utils/MoviesList.vue";
 
 export default {
   name: "App",
-  
+
   components: {
     FooterOne,
     HeaderOne,
@@ -67,6 +67,11 @@ export default {
 
 
 <style>
+body{
+  background-color: rgb(255, 149, 20);
+  margin: 0%;
+  padding: 0%;
+}
 #app {
   display: flex;
   flex-direction: column;

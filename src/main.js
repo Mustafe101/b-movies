@@ -19,7 +19,7 @@ const routes = [
   { path: '/AmericanMovies', component: AmericanMovies },
   { path: '/FrenchMovies', component: FrenchMovies },
   { path: '/LastMovies', component: LastMovies },
-  { path: '/MovieDetails', component: MovieDetails },
+  { path: '/MovieDetails/:id', component: MovieDetails },
   { path: '/SearchMovies', component: SearchMovies },
   { path: '/TopRatedMovies', component: TopRatedMovies },
 ]
