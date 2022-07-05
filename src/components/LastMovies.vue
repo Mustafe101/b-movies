@@ -1,21 +1,24 @@
 <template>
 <div>
 <h1>Last <span> Movies</span></h1>
-
+<SortButtons :movies="movies" @sort-movies="sortMovies" />
 <MoviesList :movies="lastMovies" />
+
 
 </div>
 </template>
 
 
 <script>
+import SortButtons from "./utils/SortButtons.vue";
 import MoviesList from "./utils/MoviesList.vue";
 import axios from "axios";
 
 export default {
   name: "LastMovies",
   components: {
-    MoviesList
+    MoviesList,
+    SortButtons
   },
 
   data() {

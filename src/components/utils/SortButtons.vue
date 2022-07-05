@@ -20,7 +20,7 @@ export default {
 
   methods: {
     sortByDate() {
-      const moviesClone = this.movies
+      let moviesClone = this.movies
     if (this.sortByData == true) {
       moviesClone.sort((a, b) => {
         if (a.release_date < b.release_date) {
@@ -35,7 +35,6 @@ export default {
     return this.sortByData = false
     }
 
-
 ///////////
 
      if (this.sortByData == false) {
@@ -48,18 +47,17 @@ export default {
           return -1;
         }
         return 0;
-      });
+      })
       console.log(moviesClone)
     }
     return this.sortByData = true
-    }
-},
+    },
 
 //||||||||||||||||||||||||||||||||||||||||||||||||
 
-        sortByRating() {
-      const moviesClone = this.movies
-    if (this.sortByRating == true) {
+           sortByRating() {
+      let moviesClone = this.movies
+    if (this.sortByData == true) {
       moviesClone.sort((a, b) => {
         if (a.vote_average < b.vote_average) {
           return 1;
@@ -70,12 +68,12 @@ export default {
         return 0;
       })
       
-    return this.sortByRating = false
+    return this.sortByData = false
     }
-
+        
 ////////////
 
-     if (this.sortByRating == false) {
+     if (this.sortByData == false) {
 
       moviesClone.sort((a, b) => {
         if (a.vote_average > b.vote_average) {
@@ -85,20 +83,21 @@ export default {
           return -1;
         }
         return 0;
-      });
-      console.log(moviesClone)
+      })
+      return this.sortByData = true
     }
-    return this.sortByRating = true
-    },
+        },
+
+  
 
 
 //||||||||||||||||||||||||||||||||||||||
 
 
 
-     sortBytitle() {
-      const moviesClone = this.movies
-    if (this.sortBytitle == true) {
+        sortByTitle() {
+      let moviesClone = this.movies
+    if (this.sortByData == true) {
       moviesClone.sort((a, b) => {
         if (a.title < b.title) {
           return 1;
@@ -109,12 +108,13 @@ export default {
         return 0;
       })
       
-    return this.sortByRating = false
+    return this.sortByData = false
     }
+    
 
     ///////////////
     
- if (this.sortBytitle == false) {
+ if (this.sortByTitle == false) {
 
       moviesClone.sort((a, b) => {
         if (a.title > b.title) {
@@ -125,10 +125,12 @@ export default {
         }
         return 0;
       });
-      console.log(moviesClone)
+        return this.sortByData = true
+
     }
-    return this.sortBytitle = true
-    },
+       },
+  },
+
 
 
 
@@ -140,5 +142,6 @@ export default {
     };
   },
 }
+
 
 </script>

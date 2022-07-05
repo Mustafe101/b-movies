@@ -2,6 +2,8 @@
   <h1>American <span> Movies</span></h1>
 
   <div>
+        <SortButtons :movies="movies" @sort-movies="sortMovies" />
+
     <ul>
       
       <li class="american_movies" v-for="movie in movies" v-bind:key="movie.id">
@@ -21,17 +23,20 @@
 
 <script>
 import MovieCard from "./utils/MovieCard.vue";
+import SortButtons from "./utils/SortButtons.vue";
 import axios from "axios";
 
 export default {
   name: "AmericanMovies",
   components: {
-    MovieCard
+    MovieCard,
+    SortButtons
   },
 
   data() {
     return {
-      movies: null    };
+      movies: null    
+      };
   },
 
   mounted() {

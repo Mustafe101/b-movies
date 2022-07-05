@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1>Top Rated <span> Movies</span></h1>
+    <SortButtons :movies="movies" @sort-movies="sortMovies" />
+
     <MoviesList :movies="movies" />
   </div>
 </template>
@@ -8,13 +10,14 @@
 
 <script>
 import MoviesList from "./utils/MoviesList.vue";
-
+import SortButtons from "./utils/SortButtons.vue";
 import axios from "axios";
 
 export default {
   name: "TopRatedMovies",
   components: {
     MoviesList,
+    SortButtons
   },
 
   data() {

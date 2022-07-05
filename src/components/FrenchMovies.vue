@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>French <span> Movies</span></h1>
+    <SortButtons :movies="movies" @sort-movies="sortMovies" />
     <MoviesList :movies="frenchMovies" />
   </div>
 </template>
@@ -8,12 +9,14 @@
 
 <script>
 import MoviesList from "./utils/MoviesList.vue";
+import SortButtons from "./utils/SortButtons.vue";
 import axios from "axios";
 
 export default {
   name: "FrenchMovies",
   components: {
     MoviesList,
+    SortButtons
   },
 
   data() {
