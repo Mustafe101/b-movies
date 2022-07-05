@@ -1,6 +1,6 @@
 <template>
   <router-link :to="`/MovieDetails/${id}`">
-    <div class="card" style="width: 20rem">
+    <div class="card" style="width: 25rem">
       <h5 class="card-title">{{ title }}</h5>
       <img
         v-if="poster_path"
@@ -11,7 +11,6 @@
         <p>{{ release_date }}</p>
         <p class="card-text">{{ vote_average }}</p>
         <p class="card-text">{{ overview }}</p>
-        <a href="#" class="btn btn-primary">watch</a>
       </div>
     </div>
   </router-link>
@@ -20,13 +19,7 @@
 <script>
 export default {
   name: "MovieCard",
-  props: [
-    "id",
-    "title",
-    "poster_path",
-    "release_date",
-    "vote_average",
-    "overview",
+  props: ["id", "title", "poster_path", "release_date", "vote_average", "overview",
   ],
 
   data() {
@@ -45,6 +38,9 @@ export default {
   padding: 5px;
   margin: 10px;
   color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  min-height: 100vh;
 }
 li {
   text-decoration: none;

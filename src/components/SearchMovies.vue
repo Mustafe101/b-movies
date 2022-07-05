@@ -1,7 +1,10 @@
 <template>
 
 <div>
-<input v-model="search" @keyup="getSearch(search)" />
+<form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="search" @keyup="getSearch(search)" />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
 </div>
 <MoviesList :movies="movies" :loading="loading" :errored="errored" />
 </template>
@@ -14,7 +17,6 @@ export default {
   components: {
     MoviesList,
   },
-
  
 methods: {
         sortMovies(movies) {
@@ -31,17 +33,16 @@ methods: {
     },
   data(){
     return{
-    movie: null,
+    movies: null,
     loading: true
   }
 }
-
-
-
-
-
 }
 </script>
 
 <style>
+form{
+  justify-content: center;
+  padding: 30px;
+}
 </style>

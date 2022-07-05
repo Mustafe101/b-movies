@@ -30,9 +30,7 @@ export default {
 
   data() {
     return {
-      movies: null,
-      preUrl: "https://image.tmdb.org/t/p/original/",
-    };
+      movies: null    };
   },
 
   mounted() {
