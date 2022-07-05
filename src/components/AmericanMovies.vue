@@ -3,6 +3,7 @@
 
   <div>
     <ul>
+      
       <li class="american_movies" v-for="movie in movies" v-bind:key="movie.id">
         <MovieCard
           :id="movie.id"
