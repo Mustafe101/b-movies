@@ -5,12 +5,16 @@
 <div class="moviedetails">
     <div class="row g-1">
       <div class="col">
-        <div v-if="movie.poster_path">
+        <div class = "imagebox" v-if="movie.poster_path">
           <img v-bind:src="preUrl + movie.poster_path" alt="moviePoster" />
         </div>
       </div>
       <div class="col-md-4">
         <div class="card-body">
+          <div class="mt-5 col-md-3 p-5" id="trailer" v-if="video[0]">
+      <iframe
+        width="500" height="300" v-bind:src="'https://www.youtube.com/embed/' + video[0].key" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="shadow"></iframe>
+    </div>
           <h2 class="card-title">{{ movie.title }}</h2>
           <p class="card-text1">{{ movie.tagline }}</p>
           <p class="card-text2">{{ movie.overview }}</p>
@@ -22,11 +26,9 @@
             <small class="text-muted" style="width: 30vw">Release Date: {{movie.release_date}}</small>
           </p>
         </div>
+        
       </div>
-      <div class="mt-5 col-md-3 p-5" id="trailer" v-if="video[0]">
-      <iframe
-        width="500" height="300" v-bind:src="'https://www.youtube.com/embed/' + video[0].key" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="shadow"></iframe>
-    </div>
+      
     </div>
 
   </div>
@@ -136,12 +138,35 @@ h2 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .col-md-7 {
-  width: 30vw;
+  width: fit-content;
+}
+
+.col-md-4 {
+  width: 50%;
 }
 .mt-5 {
-  width: 30vw;
+  width: fit-content;
+  padding: 0%;
 }
 .row{
   width: 100%;
 }
+
+.imagebox{
+  width: 40vw;
+}
+
+.col{
+  width: fit-content;
+}
+
+#trailer{
+  padding: 0%;
+}
+
+iframe{
+  width: 40vw;
+  height: 20vh;
+  padding: 0%;
+  }
 </style>
