@@ -3,7 +3,6 @@
 
   <div>
         <SortButtons :movies="movies" @sort-movies="sortMovies" />
-
     <ul>
       
       <li class="american_movies" v-for="movie in movies" v-bind:key="movie.id">

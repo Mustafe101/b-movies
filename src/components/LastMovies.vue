@@ -1,7 +1,7 @@
 <template>
 <div>
 <h1>Last <span> Movies</span></h1>
-<SortButtons :movies="movies" @sort-movies="sortMovies" />
+<SortButtons :movies="lastMovies" @sort-movies="sortMovies" />
 <MoviesList :movies="lastMovies" />
 
 

@@ -76,6 +76,7 @@ body {
 }
 h1 {
   font-family: "Titan One", cursive;
+  margin: 20px;
 }
 span {
   color: red;

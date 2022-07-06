@@ -1,6 +1,7 @@
 <template>
   <router-link :to="`/MovieDetails/${id}`">
-    <div class="card" style="width: 25rem">
+    <div class="card">
+      <p v-once v-if="$route.path == '/TopRatedMovies'"><span v-once>{{ index +1}}</span></p>
       <h5 class="card-title">{{ title }}</h5>
       <img
         v-if="poster_path"
@@ -19,7 +20,7 @@
 <script>
 export default {
   name: "MovieCard",
-  props: ["id", "title", "poster_path", "release_date", "vote_average", "overview",
+  props: ["id", "title", "poster_path", "release_date", "vote_average", "overview", "index"
   ],
 
   data() {
@@ -34,7 +35,7 @@ export default {
 .card {
   display: flex;
   background-color: #2c3e50;
-  width: 100vw;
+  width: 25rem;
   padding: 5px;
   margin: 10px;
   color: white;
@@ -42,6 +43,18 @@ export default {
   font-size: 1rem;
   min-height: 100vh;
 }
+
+@media screen and (max-width: 700px) {
+  .card{
+    width: 18rem;
+    font-size: 1.2rem;
+    height: fit-content;
+    min-height: 20vh;
+  }
+}
+
+
+
 li {
   text-decoration: none;
   list-style: none;

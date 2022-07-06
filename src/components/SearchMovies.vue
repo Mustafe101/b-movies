@@ -12,7 +12,6 @@
 <script>
 import axios from "axios"
 import MoviesList from "./utils/MoviesList.vue"
-
 export default {
   name: "SearchMovies",
   components: {
@@ -47,7 +46,7 @@ methods: {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 60vh;
+  height: 30vh;
 }
 form{
   display: flex;

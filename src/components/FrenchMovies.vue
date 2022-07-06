@@ -1,7 +1,7 @@
 <template>
+<h1>French <span> Movies</span></h1>
   <div>
-    <h1>French <span> Movies</span></h1>
-    <SortButtons :movies="movies" @sort-movies="sortMovies" />
+    <SortButtons :movies="frenchMovies" @sort-movies="sortMovies" />
     <MoviesList :movies="frenchMovies" />
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   name: "FrenchMovies",
   components: {
     MoviesList,
-    SortButtons
+    SortButtons,
   },
 
   data() {

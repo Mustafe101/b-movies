@@ -35,7 +35,7 @@ export default {
     return this.sortByData = false
     }
 
-///////////
+
 
      if (this.sortByData == false) {
 
@@ -53,7 +53,7 @@ export default {
     return this.sortByData = true
     },
 
-//||||||||||||||||||||||||||||||||||||||||||||||||
+
 
            sortByRating() {
       let moviesClone = this.movies
@@ -71,7 +71,7 @@ export default {
     return this.sortByData = false
     }
         
-////////////
+
 
      if (this.sortByData == false) {
 
@@ -88,10 +88,7 @@ export default {
     }
         },
 
-  
 
-
-//||||||||||||||||||||||||||||||||||||||
 
 
 
@@ -113,8 +110,9 @@ export default {
     
 
     ///////////////
+  
     
- if (this.sortByTitle == false) {
+ if (this.sortByData == false) {
 
       moviesClone.sort((a, b) => {
         if (a.title > b.title) {
@@ -130,8 +128,7 @@ export default {
     }
        },
   },
-
-
+  
 
 
   data() {
